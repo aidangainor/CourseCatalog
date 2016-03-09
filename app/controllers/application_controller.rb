@@ -4,6 +4,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def hello
-    render text: "hello, word!"
+    render text: "hello, word"
   end
+
+  def branch
+    render text: "this is a quick test of branching"
 end

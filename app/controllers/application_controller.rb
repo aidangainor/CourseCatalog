@@ -9,4 +9,5 @@ class ApplicationController < ActionController::Base
 
   def branch
     render text: "this is a quick test of branching"
+  end
 end

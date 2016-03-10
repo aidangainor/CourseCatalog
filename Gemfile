@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.2.4'
 
 gem 'rails'
+gem 'bcrypt',               '3.1.7'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'bootstrap-sass', '3.2.0.0'

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :instructors
+  resources :subjects
+  resources :courses
   root 'login#login'
 
   get 'login/signup'

@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Courses</h1>
+<h1><br>Listing Courses</h1>
 
 <table>
   <thead>
@@ -9,22 +9,18 @@
       <th>Code</th>
       <th>Name</th>
       <th>Description</th>
-      <th>Term</th>
-      <th colspan="3"></th>
+      <th colspan="5"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @courses.each do |course| %>
       <tr>
-        <td><%= course.id %></td>
-        <td><%= course.code %></td>
-        <td><%= course.name %></td>
-        <td><%= course.description %></td>
-        <td><%= course.term %></td>
-        <td><%= link_to 'Show', course %></td>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><br><br><%= course.id.to_s + "  "%>   </td>
+        <td><br><br><%= course.code %>   </td>
+        <td><br><br><%= course.name %>   </td>
+        <td><br><br><%= course.description %>   </td>
+        <td><br><br><%= link_to 'Show', course %></td>
       </tr>
     <% end %>
   </tbody>

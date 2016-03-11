@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   resources :instructors
   resources :subjects
   resources :courses
-  root 'login#login'
+  resources :users
 
-  get 'login/signup'
+  root 'login#login'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

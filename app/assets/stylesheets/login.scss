@@ -11,6 +11,7 @@ body {
 }
 
 .fadein {
+  z-index: -1;
   position: fixed;
   top: -50%;
   left: -50%;
@@ -19,6 +20,7 @@ body {
 }
 
 .fadein img {
+  z-index: -1;
   position: absolute;
   top: 0;
   left: 0;

@@ -1,4 +1,7 @@
 class SubjectsController < ApplicationController
+  include SessionsHelper
+  before_filter :authenticate
+  
   before_action :set_subject, only: [:show, :edit, :update, :destroy]
 
   # GET /subjects

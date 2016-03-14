@@ -1,4 +1,7 @@
 class InstructorsController < ApplicationController
+  include SessionsHelper
+  before_filter :authenticate
+  
   before_action :set_instructor, only: [:show, :edit, :update, :destroy]
 
   # GET /instructors

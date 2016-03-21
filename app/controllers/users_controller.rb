@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   include SessionsHelper
 
   def show
-    
+
     @user = User.find(params[:id])
   end
 
@@ -19,6 +19,13 @@ class UsersController < ApplicationController
     else
       render 'new'
     end
+  end
+
+
+  def enroll
+    course = Course.find(params[:course_id])
+    current_user.enrollments.create(course: course)
+    redirect_to :back
   end
 
   private

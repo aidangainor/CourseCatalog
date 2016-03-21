@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   get 'signup'  => 'users#new'
   post   'login'   => 'sessions#create'
+  post 'enroll' => 'users#enroll'
   delete 'logout'  => 'sessions#destroy'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'

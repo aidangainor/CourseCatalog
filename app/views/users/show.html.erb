@@ -1,3 +1,31 @@
+
+
+<h1><br>Courses Enrolled In</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="5"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user.enrollments.each do |enrolled| %>
+      <tr>
+        <td><br><br><%= enrolled.course.id.to_s + "  "%>   </td>
+        <td><br><br><%= enrolled.course.code %>   </td>
+        <td><br><br><%= enrolled.course.name %>   </td>
+        <td><br><br><%= enrolled.course.description %>   </td>
+        <td><br><br><%= link_to 'Show', enrolled.course %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 <br>
-<br>
-<%= @user.name %>, <%= @user.email %>
+
+<%= link_to 'New Course', new_course_path %>

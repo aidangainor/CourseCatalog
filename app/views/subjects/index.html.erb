@@ -21,12 +21,6 @@
         <td><%= subject.name %></td>
         <td><%= subject.abbreviation %></td>
         <td><%= link_to 'Show', subject %></td>
-        <td><%= link_to 'Show', subject %></td>
-
-        <%= form_tag('/search/enroll', :method => "get", id: "search-form") do %>
-          <%= submit_tag "Search" %>
-        <% end %>
-
       </tr>
     <% end %>
   </tbody>

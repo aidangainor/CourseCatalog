@@ -20,7 +20,11 @@
         <td><br><br><%= course.code %>   </td>
         <td><br><br><%= course.name %>   </td>
         <td><br><br><%= course.description %>   </td>
-        <td><br><br><%= link_to 'Show', course %></td>
+
+        <td><br><br><%= form_tag({:controller => "users", :action => "enroll"}, :method => "post") do %>
+          <%= hidden_field_tag "course_id", course.id %>
+          <%= submit_tag "ENROLL" %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

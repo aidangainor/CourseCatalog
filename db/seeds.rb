@@ -27,7 +27,19 @@ def load_subject
   end
 end
 
+def load_courses_subject
+  course_json = JSON.parse(File.read(Dir.pwd + "/db/json/course.json"))
+  course_json.each do |course|
+    count = 0
+    course['subjects'].each do |subj|
+      puts subj
+    end
+  end
+end
 
-load_course()
-load_instructor()
-load_subject()
+
+#load_course()
+#load_instructor()
+#load_subject()
+
+load_courses_subject()

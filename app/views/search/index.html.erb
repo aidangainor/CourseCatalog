@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1><br>Listing Courses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="5"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @courses.each do |course| %>
+      <tr>
+        <td><br><br><%= course.id.to_s + "  "%>   </td>
+        <td><br><br><%= course.code %>   </td>
+        <td><br><br><%= course.name %>   </td>
+        <td><br><br><%= course.description %>   </td>
+        <td><br><br><%= link_to 'Show', course %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Course', new_course_path %>

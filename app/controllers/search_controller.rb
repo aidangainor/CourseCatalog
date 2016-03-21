@@ -4,8 +4,13 @@ class SearchController < ApplicationController
   end
 
   def index
+    if Rails.env.production?
+      search_str = "name ILIKE ?"
+    else
+      search_str = "name LIKE ?"
+    end
     if params[:search]
-      @courses = Course.where("name LIKE ?", "%#{params[:search]}%")
+      @courses = Course.where(search_str, "%#{params[:search]}%")
     else
       @courses = Course.all.order(:code)
     end

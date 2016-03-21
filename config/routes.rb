@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :subjects
   resources :courses
   resources :users
+  get    'search'   => 'search#new'
   get    'login'   => 'sessions#new'
   get 'signup'  => 'users#new'
   post   'login'   => 'sessions#create'

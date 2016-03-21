@@ -30,9 +30,11 @@ end
 def load_courses_subject
   course_json = JSON.parse(File.read(Dir.pwd + "/db/json/course.json"))
   course_json.each do |course|
-    count = 0
+    cours = Course.where(:course_id => course['id'])
     course['subjects'].each do |subj|
-      puts subj
+      id = subj['id']
+      subj = Subject.where(:subject_id => id)
+      cours.subjectclasses.create(subject: subj)
     end
   end
 end

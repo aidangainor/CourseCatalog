@@ -1,9 +1,7 @@
 class SearchController < ApplicationController
   def new
     @subjects = Subject.all.order(:name)
-  end
 
-  def index
     if Rails.env.production?
       search_str = "name ILIKE ?"
     else

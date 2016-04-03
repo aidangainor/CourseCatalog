@@ -2,10 +2,10 @@
 <h1 >Search for courses and subject</h1>
 
 <%= form_tag('/search/new', :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], id: 'search_field', class: 'form-control', placeholder: "Search Courses" %>
+  <%= text_field_tag :search, params[:search], id: 'search_field', class: 'form-control', placeholder: "Search Courses", oninput: "ajaxSearch()"%>
 
 
-  <select class="form-control" id="dropdown_select" name="subject">
+  <select class="form-control" id="dropdown_select" name="subject" onchange="ajaxSearch()">
     <option selected="true" style="display:none;">Select Subject</option>
     <% @subjects.each do |subject| %>
       <option value="<%=subject.subject_id%>"><%= subject.name %></option>

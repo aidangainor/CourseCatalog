@@ -1,13 +1,6 @@
-$(document).ready(function(){
-  var form = document.getElementById("search_field");
-  var options = document.getElementById("dropdown_select");
-  form.oninput = doSomething;
-  options.onchange = doSomething;
-
-});
 
 
-function doSomething(){
+function ajaxSearch(){
   $.ajax({
     type: 'GET',
     url: $("#search-form").attr("action"),

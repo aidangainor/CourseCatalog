@@ -1,4 +1,6 @@
 class SearchController < ApplicationController
+  include SessionsHelper
+  before_filter :authenticate
   def new
     @subjects = Subject.all.order(:name)
 
